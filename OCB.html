@@ -1,0 +1,142 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>OCB.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+  </head>
+  <body>
+    <p>Below you will find the existing and NEW Object Code Bits (OCB) for objects.</p>
+    <p>Any specific levels where an entity exists once (ie: the famous Midas gold effect) have their original data file listed as <code>xxx. extension</code> .</p>
+    <p>All objects will be listed in their original slots and their TEN slots for ease with TEN on the top and the original slot underneath. Feel free to click on the ID name to download a fixed version of the entity for use in TEN.</p>
+    <p>
+      <strong>Please note that these OCB values are for Tomb Engine ONLY.</strong>
+    </p>
+    <h1 id="generic">Generic</h1>
+    <h4 id="switch_type-x">
+      <code>Switch_Type X</code>
+    </h4>
+    <ul>
+      <li>0 for wall switch</li>
+      <li>1 for small wall switch</li>
+      <li>2 for small button</li>
+      <li>3 for big button</li>
+      <li>4 for giant button (sequence switch)</li>
+      <li>5 for valve turn</li>
+      <li>6 for hole switch</li>
+      <li>any other OCBs play corresponding switch on anim or OCB+1 switch off anim.</li>
+    </ul>
+    <h4 id="crowbar-out-of-wall-animation-pickup">Crowbar out of wall animation + pickup</h4>
+    <ul>
+      <li>put OCB 9 to perform lara's animation of pulling crowbar out of wall + crowbar pickup. (works with TR5 wall crowbar from The Submarine level)</li>
+    </ul>
+    <h1 id="tomb-raider-starring-lara-croft">Tomb Raider : Starring Lara Croft</h1>
+    <h4 id="id_winged_mummy">
+      <code>ID_WINGED_MUMMY</code>
+    </h4>
+    <ul>
+      <li>1 - Start off flying when triggered.</li>
+      <li>2 - Start off as a mummy when triggered.</li>
+      <li>4 - Start posed.</li>
+      <li>8 - No Wings.</li>
+      <li>16 - Disable Bomb Attack.</li>
+      <li>32 - Disable Shard Attack.</li>
+    </ul>
+    <h1 id="tomb-raider-ii-the-dagger-of-xian">Tomb Raider II: The Dagger of Xian.</h1>
+    <h1 id="tomb-raider-iii-adventures-of-lara-croft">Tomb Raider III: Adventures of Lara Croft.</h1>
+    <h4 id="id_cobra">
+      <code>ID_COBRA</code>
+    </h4>
+    <ul>
+      <li>To correct the death animation: please change the <code>STATE ID</code> of <code>ANIMATION 5: "COBRA_ANIM_DEATH"</code> from <code>0</code> to <code>4</code></li>
+    </ul>
+    <h1 id="tomb-raider-iv-the-last-revelation">Tomb Raider IV: The Last Revelation.</h1>
+    <h4 id="id_rollingball">
+      <code>ID_ROLLINGBALL</code>
+    </h4>
+    <ul>
+      <li>1 - Rollingball silent mode - No camera shake or sound.</li>
+    </ul>
+    <h4 id="id_teeth_spikes">
+      <code>ID_TEETH_SPIKES</code>
+    </h4>
+    <ul>
+      <li>0 -  Ordinary TR4 teeth spikes behaviour</li>
+      <li>1 - Spikes stuck out constantly</li>
+      <li>2 - Stick out once and retract forever</li>
+      <li>3 and onwards - OCB specifies spikes retraction delay in frames, i.e. OCB 30 = spikes will delay for 1 second, OCB 60 = 2 seconds, etc</li>
+    </ul>
+    <h4 id="id_hammer-hall.tr4">
+      <code>ID_HAMMER</code>
+      <code>Hall.TR4</code>
+    </h4>
+    <ul>
+      <li>0 - Does not animate but will cause Lara damage if collided.</li>
+      <li>2 - Hardcoded Obelisk set up.</li>
+      <li>3 - Triggers once, then raises up and remains there.</li>
+      <li>4 - Works like OCB 3 but will not stop. So once triggered will continuously raise, smackdown, raise up and then loop every two seconds.</li>
+    </ul>
+    <h4 id="id_dog">
+      <code>ID_DOG</code>
+    </h4>
+    <ul>
+      <li>0: Normal behaviour</li>
+      <li>1: Starts frozen (laying down like statues). Trigger to wake them up.</li>
+    </ul>
+    <h4 id="id_waterfallmist">
+      <code>ID_WATERFALLMIST</code>
+    </h4>
+    <ul>
+      <li>OCB <code>xxyy</code> where XX is width, and YY is sprite size.</li>
+    </ul>
+    <h1 id="tomb-raider-chronicles">Tomb Raider Chronicles</h1>
+    <h4 id="id_bomb">
+      <code>ID_BOMB</code>
+    </h4>
+    <ul>
+      <li>Add  0-99 to OCB for delay (quarter seconds)</li>
+      <li>Add 10000 to OCB for green explosion  ( 0 or 1)</li>
+      <li>Add 100-900 to OCB for size  (1-9)</li>
+      <li>Add 1000 to OCB for blast wave ( 0 or 1)</li>
+    </ul>
+    <h4 id="id_guard1-id_swat-id_swat_plus">
+      <code>ID_GUARD1</code>
+      <code>ID_SWAT</code>
+      <code>ID_SWAT_PLUS</code>
+    </h4>
+    <p>
+      <code>(ID_GUARD1)(ID_GUARD2)(ID_GUARD3)</code>
+    </p>
+    <ul>
+      <li>0 - Default.</li>
+      <li>1 - Reload</li>
+      <li>2 - Door Kick</li>
+      <li>3 - Rappel Down Rope</li>
+      <li>4 - Sleeping</li>
+      <li>5 - Rappel Down Rope (Fast)</li>
+      <li>6 - Wait On Wall</li>
+      <li>7 - Use Computer</li>
+      <li>8 - Start Hunt Stop</li>
+      <li>9 - Use Computer Scientist</li>
+      <li>10 - Idle</li>
+      <li>11 - Run</li>
+    </ul>
+    <h4 id="id_hitman">
+      <code>ID_HITMAN</code>
+    </h4>
+    <p>
+      <code>ID_CYBORG</code>
+    </p>
+    <ul>
+      <li>Set room type to "No Lens Flare" and he will choke to death.</li>
+    </ul>
+  </body>
+</html>
